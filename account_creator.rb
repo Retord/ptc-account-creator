@@ -91,7 +91,7 @@ def create_account
 
 	while !email_arrived
 		begin
-			res = open("http://api.temp-mail.ru/request/mail/id/#{md5_email}").read
+			res = open("http://api.temp-mail.ru/request/mail/id/{md5_email}").read
 			email_response = res
 			email_arrived = true
 		rescue
